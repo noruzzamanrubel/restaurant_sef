@@ -1,0 +1,28 @@
+{
+  "name": "bd-food",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp-install": "^1.1.0",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noruzzamanrubel/Bd-Food.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noruzzamanrubel/Bd-Food/issues"
+  },
+  "homepage": "https://github.com/noruzzamanrubel/Bd-Food#readme",
+  "description": ""
+}

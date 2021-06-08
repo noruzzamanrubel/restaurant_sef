@@ -1,0 +1,15 @@
+/*
+0-340px:        Phone-small
+341-375px:      Iphone-x
+376-576px:      Phone-medium
+577-767px:      Phone-large
+768-991px:      Tablet
+992-1024px:     Ipad-pro
+1025-1200px:    Tab-land
+[1200-1800px:]  is where our normal styles apply
+1800px + :      Big Desktop
+*/
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; }
