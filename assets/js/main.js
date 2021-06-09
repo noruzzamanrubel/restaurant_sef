@@ -1,61 +1,64 @@
 (function ($) {
     $(document).ready(function () {
 
-        // const now = moment();
-        // const today = moment();
+        for (i = 0; i < 7; i++) {
+            var today = moment();
+            var startdate = today.format("DD-MM-YY");
+            var new_date = moment(startdate, "DD-MM-YY").add('days', i);
 
-        // $('.day').append(m.format("dddd"));
-        // let resultDates = [];
-        // const getday = m.add(30, 'days');
-        // console.log(getday);
+            var dayName = new_date.format('dddd');
+            var day = new_date.format('DD');
+            var month = new_date.format('MM');
+            var year = new_date.format('YY');
+            var newdate = (day + '/' + month + '/' + year);
 
-        // var date = new Date();
-        // const getdate = date.setDate(date.getDate() - 30);
-        // console.log(getdate);
+            $('.food_delivery_schedule_inner_wrapp').append(`
+            <div class="col">
+                    <div class="food_delivery_column">
+                        <div class="food_header text-center">
+                            <div class="delivery_day">
+                                <p>${dayName}</p>
+                            </div>
+                            <div class="delivery_date">
+                                <p>${newdate}</p>
+                            </div>
+                        </div>
+                        <div class="food_delivery_content text-center">
+                            <div class="onoffswitch">
+                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox"
+                                    id="myonoffswitch" tabindex="0" checked>
+                                <label class="onoffswitch-label" for="myonoffswitch">
+                                    <span class="onoffswitch-inner"></span>
+                                    <!-- <span class="onoffswitch-switch"></span> -->
+                                </label>
+                            </div>
+                            <div class="food_delivery_items">
+                                <div class="food_delivery_item">
+                                    <input type="checkbox">
+                                    <span>Lunch</span>
+                                </div>
+                                <div class="food_delivery_item">
+                                    <input type="checkbox">
+                                    <span>Dinner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `);
+        }
 
-        // var daysDate = [];
-        // for(var i = 1; i<= 30; i++) {
-        //     const dates = moment().add(30, 'days');
-        //     daysDate.push( dates._locale._weekdays );
-        // }
+        $('.onoffswitch input[type="checkbox"').on('click', (function () {
+            if ($(this).prop("checked") == true) {
+                var parentel = $(this).parents(".food_delivery_content");
+                parentel.find('.food_delivery_items').addClass('active');
+            } else {
+                var parentel = $(this).parents(".food_delivery_content");
+                parentel.find('.food_delivery_items').removeClass('active');
+            }
+        }));
 
-        // daysDate.map( (value) => {
-        //     console.log(value)
-        //     $('.weak').append('<div class="col day">'+value+'</div>');
-        // } )
-        // const current = moment();
-        // let n = 7;
-        // while (n > 0) {
-        //     resultDates.push(current.format("dddd"))
-        //     current.subtract(1, "day")
-        //     n--;
-        // }
 
-        // resultDates.map( (value) => {
-        //     console.log(value)
-        //     $('.weak').append('<div class="col day">'+value+'</div>');
-        // } )
-
-        //         var currentDate = moment();
-        // var futureMonth = moment(currentDate).add(1, 'M');
-        // var futureMonthEnd = moment(futureMonth).endOf('month');
-
-        // if(currentDate.date() != futureMonth.date() && futureMonth.isSame(futureMonthEnd.format('YYYY-MM-DD'))) {
-        //     futureMonth = futureMonth.add(1, 'd');
-        // }
-
-        // console.log(currentDate);
-        // console.log(futureMonth);
-
-        // for (i = 1; i < 31; i++) {
-        //     startdate = today.format("DD-MM-YY");
-        //     var new_date = moment(startdate, "DD-MM-YY").add('days', i);
-
-        //     var day = new_date.format('DD');
-        //     var month = new_date.format('MM');
-        //     var year = new_date.format('YY');
-        //     console.log(day)
-        // }
 
     })
 })(jQuery);
