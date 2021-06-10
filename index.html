@@ -16,6 +16,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
 
@@ -23,161 +25,218 @@
 
 <body>
 
-    <div class="food_delivery_schedule mt-5">
+    <div class="availability_schedule mt-5">
         <div class="container">
-            <div class="row food_delivery_schedule_inner_wrapp">
-
-
-                <!-- <div class="col">
-                    <div class="food_delivery_column">
-                        <div class="food_header text-center">
-                            <div class="delivery_day">
-                                <p>Saturday</p>
+            <div class="row availability_schedule_inner_wrapp">
+                <div class="availability_shedule_left_arrow">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="availability_shedule_right_arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="col">
+                    <div class="availability_column">
+                        <div class="availability_header text-center">
+                            <div class="availability_day">
+                                <p id="day_1_day"></p>
                             </div>
-                            <div class="delivery_date">
-                                <p>09/06/21</p>
+                            <div class="availability_date">
+                                <p id="day_1_date"></p>
                             </div>
                         </div>
-                        <div class="food_delivery_content text-center">
-                            <button class="btn btn-primary">ON</button>
-                            <div class="food_delivery_items">
-                                <div class="food_delivery_item">
+                        <div class="availability_content text-center">
+                            <label for="day_1_status">
+                                <input class="availability_switch" type="checkbox" name="day_1_status"
+                                    id="day_1_status">
+                                Enabled
+                            </label>
+                            <div class="availability_items">
+                                <div class="availability_item">
                                     <input type="checkbox">
-                                    <span>Lunch</span>
+                                    <span id="day_one_lunch">Lunch</span>
                                 </div>
-                                <div class="food_delivery_item">
+                                <div class="availability_item">
                                     <input type="checkbox">
-                                    <span>Dinner</span>
+                                    <span id="day_one_dinner">Dinner</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="food_delivery_column">
-                        <div class="food_header text-center">
-                            <div class="delivery_day">
-                                <p>Saturday</p>
+                    <div class="availability_column">
+                        <div class="availability_header text-center">
+                            <div class="availability_day">
+                                <p id="day_2_day"></p>
                             </div>
-                            <div class="delivery_date">
-                                <p>09/06/21</p>
-                            </div>
-                        </div>
-                        <div class="food_delivery_content text-center">
-                            <button class="btn btn-primary">ON</button>
-                            <div class="food_delivery_items">
-                                <div class="food_delivery_item">
-                                    <input type="checkbox">
-                                    <span>Lunch</span>
-                                </div>
-                                <div class="food_delivery_item">
-                                    <input type="checkbox">
-                                    <span>Dinner</span>
-                                </div>
+                            <div class="availability_date">
+                                <p id="day_2_date"></p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="food_delivery_column">
-                        <div class="food_header text-center">
-                            <div class="delivery_day">
-                                <p>Saturday</p>
-                            </div>
-                            <div class="delivery_date">
-                                <p>09/06/21</p>
-                            </div>
-                        </div>
-                        <div class="food_delivery_content text-center">
-                            <button class="btn btn-primary">ON</button>
-                            <div class="food_delivery_items">
-                                <div class="food_delivery_item">
+                        <div class="availability_content text-center">
+                            <label for="day_2_status">
+                                <input class="availability_switch" type="checkbox" name="day_2_status"
+                                    id="day_2_status">
+                                Enabled
+                            </label>
+                            <div class="availability_items">
+                                <div class="availability_item">
                                     <input type="checkbox">
-                                    <span>Lunch</span>
+                                    <span id="day_two_lunch">Lunch</span>
                                 </div>
-                                <div class="food_delivery_item">
+                                <div class="availability_item">
                                     <input type="checkbox">
-                                    <span>Dinner</span>
+                                    <span id="day_two_dinner">Dinner</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="food_delivery_column">
-                        <div class="food_header text-center">
-                            <div class="delivery_day">
-                                <p>Saturday</p>
+                    <div class="availability_column">
+                        <div class="availability_header text-center">
+                            <div class="availability_day">
+                                <p id="day_3_day"></p>
                             </div>
-                            <div class="delivery_date">
-                                <p>09/06/21</p>
-                            </div>
-                        </div>
-                        <div class="food_delivery_content text-center">
-                            <button class="btn btn-primary">ON</button>
-                            <div class="food_delivery_items">
-                                <div class="food_delivery_item">
-                                    <input type="checkbox">
-                                    <span>Lunch</span>
-                                </div>
-                                <div class="food_delivery_item">
-                                    <input type="checkbox">
-                                    <span>Dinner</span>
-                                </div>
+                            <div class="availability_date">
+                                <p id="day_3_date"></p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="food_delivery_column">
-                        <div class="food_header text-center">
-                            <div class="delivery_day">
-                                <p>Saturday</p>
-                            </div>
-                            <div class="delivery_date">
-                                <p>09/06/21</p>
-                            </div>
-                        </div>
-                        <div class="food_delivery_content text-center">
-                            <button class="btn btn-primary">ON</button>
-                            <div class="food_delivery_items">
-                                <div class="food_delivery_item">
+                        <div class="availability_content text-center">
+                            <label for="day_3_status">
+                                <input class="availability_switch" type="checkbox" name="day_3_status"
+                                    id="day_3_status">
+                                Enabled
+                            </label>
+                            <div class="availability_items">
+                                <div class="availability_item">
                                     <input type="checkbox">
-                                    <span>Lunch</span>
+                                    <span id="day_three_lunch">Lunch</span>
                                 </div>
-                                <div class="food_delivery_item">
+                                <div class="availability_item">
                                     <input type="checkbox">
-                                    <span>Dinner</span>
+                                    <span id="day_three_dinner">Dinner</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="food_delivery_column">
-                        <div class="food_header text-center">
-                            <div class="delivery_day">
-                                <p>Saturday</p>
+                    <div class="availability_column">
+                        <div class="availability_header text-center">
+                            <div class="availability_day">
+                                <p id="day_4_day"></p>
                             </div>
-                            <div class="delivery_date">
-                                <p>09/06/21</p>
+                            <div class="availability_date">
+                                <p id="day_4_date"></p>
                             </div>
                         </div>
-                        <div class="food_delivery_content text-center">
-                            <button class="btn btn-primary">ON</button>
-                            <div class="food_delivery_items">
-                                <div class="food_delivery_item">
+                        <div class="availability_content text-center">
+                            <label for="day_4_status">
+                                <input class="availability_switch" type="checkbox" name="day_4_status"
+                                    id="day_4_status">
+                                Enabled
+                            </label>
+                            <div class="availability_items">
+                                <div class="availability_item">
                                     <input type="checkbox">
-                                    <span>Lunch</span>
+                                    <span id="day_four_lunch">Lunch</span>
                                 </div>
-                                <div class="food_delivery_item">
+                                <div class="availability_item">
                                     <input type="checkbox">
-                                    <span>Dinner</span>
+                                    <span id="day_four_dinner">Dinner</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
+                <div class="col">
+                    <div class="availability_column">
+                        <div class="availability_header text-center">
+                            <div class="availability_day">
+                                <p id="day_5_day"></p>
+                            </div>
+                            <div class="availability_date">
+                                <p id="day_5_date"></p>
+                            </div>
+                        </div>
+                        <div class="availability_content text-center">
+                            <label for="day_5_status">
+                                <input class="availability_switch" type="checkbox" name="day_5_status"
+                                    id="day_5_status">
+                                Enabled
+                            </label>
+                            <div class="availability_items">
+                                <div class="availability_item">
+                                    <input type="checkbox">
+                                    <span id="day_five_lunch">Lunch</span>
+                                </div>
+                                <div class="availability_item">
+                                    <input type="checkbox">
+                                    <span id="day_five_dinner">Dinner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="availability_column">
+                        <div class="availability_header text-center">
+                            <div class="availability_day">
+                                <p id="day_6_day"></p>
+                            </div>
+                            <div class="availability_date">
+                                <p id="day_6_date"></p>
+                            </div>
+                        </div>
+                        <div class="availability_content text-center">
+                            <label for="day_6_status">
+                                <input class="availability_switch" type="checkbox" name="day_6_status"
+                                    id="day_6_status">
+                                Enabled
+                            </label>
+                            <div class="availability_items">
+                                <div class="availability_item">
+                                    <input type="checkbox">
+                                    <span id="day_six_lunch">Lunch</span>
+                                </div>
+                                <div class="availability_item">
+                                    <input type="checkbox">
+                                    <span id="day_six_dinner">Dinner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="availability_column">
+                        <div class="availability_header text-center">
+                            <div class="availability_day">
+                                <p id="day_7_day"></p>
+                            </div>
+                            <div class="availability_date">
+                                <p id="day_7_date"></p>
+                            </div>
+                        </div>
+                        <div class="availability_content text-center">
+                            <label for="day_7_status">
+                                <input class="availability_switch" type="checkbox" name="day_7_status"
+                                    id="day_7_status">
+                                Enabled
+                            </label>
+                            <div class="availability_items">
+                                <div class="availability_item">
+                                    <input type="checkbox">
+                                    <span id="day_seven_lunch">Lunch</span>
+                                </div>
+                                <div class="availability_item">
+                                    <input type="checkbox">
+                                    <span id="day_seven_dinner">Dinner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

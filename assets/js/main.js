@@ -1,64 +1,32 @@
-(function ($) {
-    $(document).ready(function () {
+(function($) {
+    $(document).ready(function() {
+        var today = moment().subtract(1, 'day');
 
-        for (i = 0; i < 7; i++) {
-            var today = moment();
-            var startdate = today.format("DD-MM-YY");
-            var new_date = moment(startdate, "DD-MM-YY").add('days', i);
+        renderNextSevenDays(today);
 
-            var dayName = new_date.format('dddd');
-            var day = new_date.format('DD');
-            var month = new_date.format('MM');
-            var year = new_date.format('YY');
-            var newdate = (day + '/' + month + '/' + year);
+        $('.availability_shedule_right_arrow').click(function() {
+            renderNextSevenDays(today);
+        });
 
-            $('.food_delivery_schedule_inner_wrapp').append(`
-            <div class="col">
-                    <div class="food_delivery_column">
-                        <div class="food_header text-center">
-                            <div class="delivery_day">
-                                <p>${dayName}</p>
-                            </div>
-                            <div class="delivery_date">
-                                <p>${newdate}</p>
-                            </div>
-                        </div>
-                        <div class="food_delivery_content text-center">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox"
-                                    id="myonoffswitch" tabindex="0" checked>
-                                <label class="onoffswitch-label" for="myonoffswitch">
-                                    <span class="onoffswitch-inner"></span>
-                                    <!-- <span class="onoffswitch-switch"></span> -->
-                                </label>
-                            </div>
-                            <div class="food_delivery_items">
-                                <div class="food_delivery_item">
-                                    <input type="checkbox">
-                                    <span>Lunch</span>
-                                </div>
-                                <div class="food_delivery_item">
-                                    <input type="checkbox">
-                                    <span>Dinner</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `);
-        }
+        $('.availability_switch').click(function() {
+            var items = $(this).closest('.availability_content').children('.availability_items');
 
-        $('.onoffswitch input[type="checkbox"').on('click', (function () {
-            if ($(this).prop("checked") == true) {
-                var parentel = $(this).parents(".food_delivery_content");
-                parentel.find('.food_delivery_items').addClass('active');
+            if ($(this).prop('checked')) {
+                items.slideDown();
             } else {
-                var parentel = $(this).parents(".food_delivery_content");
-                parentel.find('.food_delivery_items').removeClass('active');
+                items.slideUp();
             }
-        }));
+        })
+    });
 
+    function renderNextSevenDays(today) {
+        for (var i=1; i<=7; i++) {
+            today.add(1, 'days');
+            var day = today.format('dddd');
+            var date = today.format('DD/MM/YYYY')
 
-
-    })
+            $('#day_'+i+'_day').text(day);
+            $('#day_'+i+'_date').text(date);
+        }
+    }
 })(jQuery);

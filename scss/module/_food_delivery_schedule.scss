@@ -1,103 +1,49 @@
-.food_delivery_schedule {
-    .food_delivery_schedule_inner_wrapp {
+.availability_schedule {
+    .availability_schedule_inner_wrapp {
         border: 1px solid #dee2e6;
+        border-right: 0;
+        position: relative;
+
+        .availability_shedule_left_arrow {
+            i {
+                position: absolute;
+                top: calc(0% + 25px);
+                left: calc(0% - 25px);
+                font-size: 25px;
+                cursor: pointer;
+                color: #dee2e6;
+            }
+        }
+
+        .availability_shedule_right_arrow {
+            i {
+                position: absolute;
+                top: calc(0% + 25px);
+                right: calc(0% - 25px);
+                font-size: 25px;
+                cursor: pointer;
+                color: #dee2e6;
+            }
+        }
 
         .col {
             padding: 0;
+            border-right: 1px solid #dee2e6;
 
-            .food_delivery_column {
+            .availability_column {
 
-                .food_header {
+                .availability_header {
                     padding: 15px 0;
                     border-bottom: 1px solid #dee2e6;
                 }
 
-                .food_delivery_content {
+                .availability_content {
                     padding: 20px;
-                    border-right: 1px solid #dee2e6;
 
-                    .onoffswitch {
-                        position: relative;
-                        width: 100%;
-
-                        .onoffswitch-checkbox {
-                            position: absolute;
-                            opacity: 0;
-                            pointer-events: none;
-                        }
-
-                        .onoffswitch-label {
-                            display: block;
-                            overflow: hidden;
-                            cursor: pointer;
-                            border: 2px solid #999999;
-                            border-radius: 20px;
-                        }
-                    }
-
-                    .onoffswitch-inner {
-                        display: block;
-                        width: 200%;
-                        margin-left: -100%;
-                        transition: margin 0.3s ease-in 0s;
-                    }
-
-                    .onoffswitch-inner:before,
-                    .onoffswitch-inner:after {
-                        display: block;
-                        float: left;
-                        width: 50%;
-                        height: 30px;
-                        padding: 0;
-                        line-height: 30px;
-                        font-size: 14px;
-                        color: white;
-                        font-family: Trebuchet, Arial, sans-serif;
-                        font-weight: bold;
-                        box-sizing: border-box;
-                    }
-
-                    .onoffswitch-inner:before {
-                        content: "ON";
-                        padding-left: 10px;
-                        background-color: #34A7C1;
-                        color: #FFFFFF;
-                    }
-
-                    .onoffswitch-inner:after {
-                        content: "OFF";
-                        padding-right: 10px;
-                        background-color: #EEEEEE;
-                        color: #999999;
-                        text-align: right;
-                    }
-
-                    .onoffswitch-switch {
-                        display: block;
-                        width: 18px;
-                        margin: 6px;
-                        background: #FFFFFF;
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        right: 88px;
-                        border: 2px solid #999999;
-                        border-radius: 20px;
-                        transition: all 0.3s ease-in 0s;
-                    }
-
-                    .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
-                        margin-left: 0;
-                    }
-
-                    .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
-                        right: 0px;
-                    }
-
-                    .food_delivery_items {
+                    .availability_items {
                         margin-top: 10px;
-
-                        .food_delivery_item {
+                        display: none;
+                        .availability_item {
                             padding-top: 5px;
                         }
                     }
