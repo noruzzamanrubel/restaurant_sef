@@ -6,12 +6,14 @@
         renderNextSevenDays(today);
 
         $('.availability_shedule_left_arrow').click(function () {
+
             for (var i = 7; i >= 1; i--) {
                 yes.subtract(1, 'days');
                 var day = yes.format('dddd');
                 var date = yes.format('DD/MM/YYYY');
                 $('#day_' + i + '_day').text(day);
                 $('#day_' + i + '_date').text(date);
+                
             }
         });
 
