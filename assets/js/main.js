@@ -1,20 +1,12 @@
 (function ($) {
     $(document).ready(function () {
         var today = moment().subtract(1, 'day');
-        var yes = moment().subtract(1, 'day');
+        var previousday = moment().subtract(1, 'day');
 
         renderNextSevenDays(today);
 
         $('.availability_shedule_left_arrow').click(function () {
-
-            for (var i = 7; i >= 1; i--) {
-                yes.subtract(1, 'days');
-                var day = yes.format('dddd');
-                var date = yes.format('DD/MM/YYYY');
-                $('#day_' + i + '_day').text(day);
-                $('#day_' + i + '_date').text(date);
-                
-            }
+            renderprevSevenDays(previousday);
         });
 
         $('.availability_shedule_right_arrow').click(function () {
@@ -40,6 +32,17 @@
 
             $('#day_' + i + '_day').text(day);
             $('#day_' + i + '_date').text(date);
+        }
+    }
+
+    function renderprevSevenDays(previousday) {
+        for (var i = 7; i >= 1; i--) {
+            previousday.subtract(1, 'days');
+            var day = previousday.format('dddd');
+            var date = previousday.format('DD/MM/YYYY');
+            $('#day_' + i + '_day').text(day);
+            $('#day_' + i + '_date').text(date);
+
         }
     }
 })(jQuery);
