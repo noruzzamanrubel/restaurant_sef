@@ -250,6 +250,26 @@
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
 
+    <script>
+        const number = [10, 20, 30, 40, 50]
+        const name = ['a', 'b', 'c'];
+        const object = [
+            { name: 'A', availableBooks: 20 },
+            { name: 'B', availableBooks: 10 },
+            { name: 'C', availableBooks: 5 },
+            { name: 'D', availableBooks: 2 },
+        ]
+
+        // name.map(function (value) {
+        //     console.log(value.toUpperCase());
+        // });
+        newobject = object.map(value => {
+            return (value.name + ":" + value.availableBooks);
+        });
+        console.log(newobject);
+
+    </script>
+
 </body>
 
 </html>
